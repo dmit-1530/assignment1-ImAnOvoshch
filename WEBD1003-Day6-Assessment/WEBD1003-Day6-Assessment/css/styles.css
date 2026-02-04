@@ -1,10 +1,17 @@
 /* ***************** utilities & containers ***************** */
 
+.inner-container {
+    max-width: 1528px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 /* ***************** global typography ***************** */
 
 /* ***************** header & footer ***************** */
 
 /* ***************** main content ***************** */
-
-
-/*test commit*/
