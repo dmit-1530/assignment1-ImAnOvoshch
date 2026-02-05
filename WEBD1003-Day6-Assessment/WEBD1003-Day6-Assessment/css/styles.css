@@ -90,3 +90,31 @@ footer cite {
 }
 
 /* ***************** main content ***************** */
+
+/* Team */
+
+.team .flex-container section {
+    background-color: var(--grey);
+    width: calc(((100% / 2) - (2rem / 2)) - (1.75rem * 2));
+    padding: 1.75rem;
+    display: flex;
+
+    /* The text appears to be vertically centered in each box */
+    align-items: center;
+
+    column-gap: 3.5rem;
+}
+
+.team .flex-container {
+
+    /* Different vertical and horizontal gaps */
+    row-gap: 3.25rem;
+    column-gap: 2rem;
+}
+
+section.team,
+section.plans {
+    margin-bottom: 6rem;
+}
+
+/* Plans */
