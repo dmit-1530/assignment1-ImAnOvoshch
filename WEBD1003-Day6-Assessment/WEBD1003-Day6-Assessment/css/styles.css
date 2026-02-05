@@ -14,7 +14,11 @@
 
 .flex-container {
     display: flex;
+
+    /* Needed to make the items move to a new line in case there's no more space, such as for the "Team" section that has 2 rows*/
     flex-wrap: wrap;
+
+    column-gap: 2rem;
 }
 
 /* ***************** global typography ***************** */
@@ -67,15 +71,13 @@ p {
 
 header {
     background-color: var(--primary-blue);
-    padding-top: 1.625rem;
-    padding-bottom: 1.625rem;
+    padding: 1.625rem 0;
     margin-bottom: 1.75rem;
 }
 
 footer {
     background-color: var(--primary-blue);
-    padding-top: 1.625rem;
-    padding-bottom: 1.625rem;
+    padding: 1.625rem 0;
 }
 
 footer p {
@@ -93,10 +95,17 @@ footer cite {
 
 /* Team */
 
+img {
+    max-width: 12.5rem;
+}
+
 .team .flex-container section {
     background-color: var(--grey);
+
+    /* Euqally distributing space for the section, accounting for the paddings */
     width: calc(((100% / 2) - (2rem / 2)) - (1.75rem * 2));
-    padding: 1.75rem;
+
+    padding: 2.5rem 1.75rem;
     display: flex;
 
     /* The text appears to be vertically centered in each box */
@@ -109,7 +118,13 @@ footer cite {
 
     /* Different vertical and horizontal gaps */
     row-gap: 3.25rem;
-    column-gap: 2rem;
+}
+
+.team .flex-container section:first-of-type {
+
+    /* The height of the text in this section is bigger than the image, so for each section to be 280px tall, this one has to have smaller paddings on the top and bottom */
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 section.team,
@@ -118,3 +133,37 @@ section.plans {
 }
 
 /* Plans */
+
+.plan {
+    background-color: var(--grey);
+    padding: 1.75rem;
+    display: flex;
+
+    /* To make sure the items stay as a column instead of moving to one line */
+    flex-direction: column;
+
+    /* Centering the items horizontally and equally distributing the space between each item */
+    justify-content: center;
+    justify-content: space-between;
+
+    text-align: center;
+
+    /* Euqally distributing space for the section, accounting for the paddings */
+    width: calc(((100% / 3) - (4rem / 3)) - (1.75rem * 2));
+}
+
+.plan section ul li {
+    text-align: left;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.plan section ul {
+    margin: 0;
+}
+
+.plan p:last-of-type {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
