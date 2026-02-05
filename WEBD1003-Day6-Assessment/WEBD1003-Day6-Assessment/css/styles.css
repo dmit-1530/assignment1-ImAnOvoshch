@@ -160,6 +160,10 @@ section.plans {
 
 .plan section ul {
     margin: 0;
+
+    /* Used inline-block here to make the list centered without having to use text-align: center property, as it would make all text centered separately (no left-alignment) */
+    /* Before, the default display was block, so the list took up the full available width of the container and did not let the justify-content:center property center the list */
+    display: inline-block;
 }
 
 .plan p:last-of-type {
