@@ -143,7 +143,6 @@ section.plans {
     flex-direction: column;
 
     /* Centering the items horizontally and equally distributing the space between each item */
-    justify-content: center;
     justify-content: space-between;
 
     text-align: center;
